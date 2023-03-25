@@ -1,14 +1,33 @@
 <script>
+  	import { onMount } from 'svelte';
  let items = ["Home","Skills","Experince","Contact"]
+
+ let today = new Date();
+ let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+ let time = new Date();
+  $: hours = time.getHours();
+  $: minutes = time.getMinutes();
+  $: seconds = time.getSeconds();
+  $: dateTime = date+' '+hours+ ':' + minutes+ ':' + seconds;
+ 
+  onMount(() => {
+		const interval = setInterval(() => {
+			time = new Date();
+		}, 1000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
 </script>
 
-
+<h1 class="text-black dark:text-white text-end px-6 font-mono">{dateTime}</h1>
 <header>
-    <nav class="p-3 border-gray-200 rounded bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+    <nav class="p-3 border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="/" class="flex items-center">
-              <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
-              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+              <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Logo" />
+              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Ammura</span>
           </a>
           <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
