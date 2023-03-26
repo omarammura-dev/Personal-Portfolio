@@ -1,6 +1,6 @@
 <script>
     import { Tabs, TabItem } from 'flowbite-svelte';
-
+    import { Badge } from 'flowbite-svelte';
     export let tabs;
 </script>
 

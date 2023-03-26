@@ -30,9 +30,7 @@
   <div>   
     <Card/> 
   </div>
-  <div class="px-20">
-    
-
+<div class="px-20">
 
 <form  on:submit|preventDefault={handleSubmit} action="https://send.pageclip.co/vOf1aijihVi3PCuBhDN1lJQ7VyLSmvuD/myWebsite">
     <div class="grid  gap-6 mb-6 md:grid-cols-2">
