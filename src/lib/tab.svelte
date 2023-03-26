@@ -5,7 +5,7 @@
 </script>
 
 <Tabs class="justify-center">
-    <TabItem open title="Web development" >
+    <TabItem  open title="Web development" color="green">
         <p class="text-sm text-gray-500 dark:text-gray-400">text for Web</p>
      </TabItem>
     {#each tabs as tab }
@@ -15,5 +15,6 @@
     {/each}
     
 </Tabs>
+
 
 

@@ -37,7 +37,7 @@
             <ul class="flex flex-col mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
              {#each items as item}
              <li>
-              <a href="/{item}" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">{item}</a>
+              <a href="#{item}" class=" block py-2 pl-3 pr-4 text-white to-emerald-600 from-sky-400 rounded md:bg-transparent md:to-emerald-600 hover:to-emerald-600 md:p-0 md:dark:text-white dark:green md:dark:bg-transparent" aria-current="page">{item}</a>
             </li>
              {/each}
             </ul>
