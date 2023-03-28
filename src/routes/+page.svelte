@@ -4,15 +4,13 @@
     import Tab from '$lib/tab.svelte'
     import Contact from '$lib/contact.svelte'
     import Experinces from '../lib/experinces.svelte';
-    import { Button, Hr } from 'flowbite-svelte'
-    import { Img } from 'flowbite-svelte';
-    import { Blockquote } from 'flowbite-svelte'
+    import { Progressbar, Hr,Img,Blockquote } from 'flowbite-svelte'
+    import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
 
 
-    let tabs = [{title:"Android development",p:""},{title:"AI",p:"just text for AI"},{title:"Competetive Programming",p:"just text for cp"},{title:"DevOps",p:"just text for Devops"}];
+
     let experinces= [{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-present ",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
-    {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"dummy",date:"dummy",p:"dummy"}]
-    let  currentTab = 'Web development';
+    {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Mission : Building Native Android Chat Application "}]
 </script>
 
 
@@ -89,9 +87,70 @@ As a Computer Engineering student, I am currently focusing on developing my skil
     <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
 </div>
     <section>
-        <Tab {tabs} /> 
+        <Tab/> 
     </section>
 
+    <div id="L&T">
+        <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Languages & Tools</h1>
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+    </div>
+    <section >
+      <div class="flow-root">
+        <div class="float-left mx-20">
+            <div class="my-4 " style="width: 400px;">
+                <div class="mb-1 text-base font-medium dark:text-white">C++</div>
+                  <Progressbar
+                   progress="60" size="h-6" color="gray" />
+            </div>
+            <div class="my-4 " style="width: 400px;">
+                <div class="mb-1 text-base font-medium dark:text-white">Java</div>
+                  <Progressbar
+                   progress="70" size="h-6" color="red" />
+            </div>
+            <div class="my-4 " style="width: 400px;">
+                <div class="mb-1 text-base font-medium dark:text-white">Python</div>
+                  <Progressbar
+                   progress="70" size="h-6" color="yellow" />
+            </div>
+            <div class="my-4 " style="width: 400px;">
+                <div class="mb-1 text-base font-medium dark:text-white">TypeScript</div>
+                  <Progressbar
+                   progress="50" size="h-6" color="blue" />
+            </div>
+        </div>
+        <div class="mt-10">
+
+            <Table>
+                <TableHead>
+                  <TableHeadCell>Framworks/compilers</TableHeadCell>
+                  <TableHeadCell>DevOps</TableHeadCell>
+                  <TableHeadCell>Cloud</TableHeadCell>
+                  <TableHeadCell>Databases</TableHeadCell>
+                </TableHead>
+                <TableBody class="divide-y">
+                  <TableBodyRow>
+                    <TableBodyCell>NodeJs</TableBodyCell>
+                    <TableBodyCell>Docker</TableBodyCell>
+                    <TableBodyCell>Azure</TableBodyCell>
+                    <TableBodyCell>MySql/Sqlite</TableBodyCell>
+                  </TableBodyRow>
+                  <TableBodyRow>
+                    <TableBodyCell>SvelteJs</TableBodyCell>
+                    <TableBodyCell>kubernetes</TableBodyCell>
+                    <TableBodyCell>Google Cloud</TableBodyCell>
+                    <TableBodyCell>MongoDB</TableBodyCell>
+                  </TableBodyRow>
+                  <TableBodyRow>
+                    <TableBodyCell>Express</TableBodyCell>
+                    <TableBodyCell></TableBodyCell>
+                    <TableBodyCell>AWS</TableBodyCell>
+                    <TableBodyCell>FirebaseStore/RealtimeDB</TableBodyCell>
+                  </TableBodyRow>
+                </TableBody>
+              </Table>
+        </div>
+      </div>
+    </section>
     <div id="Experince">
         <h1 class="text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Experiences</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
