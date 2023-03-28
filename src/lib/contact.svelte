@@ -47,7 +47,7 @@
       <Label for="email" class="mb-2">Email address</Label>
       <Input type="email" id="email" placeholder="john.doe@company.com" required />
     </div>
-    <div class="mb-6 ">
+    <div class="mb-6">
         <Label for="message" class="mb-2 h-5">Your Message</Label>
         <Textarea id="message" placeholder="Your message" rows="4" name="message"/>
       </div>

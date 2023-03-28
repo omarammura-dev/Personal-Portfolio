@@ -53,6 +53,19 @@
                 </button> 
               </a>
             </div>
+          <div style="margin-left: 49%; margin-top:40px;" >
+            <svg fill="#31C48D" class="animate-bounce" height="35px" width="35px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            viewBox="0 0 512.04 512.04" xml:space="preserve">
+               <g>
+           <g>
+               <path d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46
+                   c-4.267-4.053-10.88-4.053-15.147,0L3.12,146.807c-4.16,4.16-4.16,10.88,0,15.04L248.453,407.5c4.16,4.16,10.88,4.16,15.04,0
+                   l245.333-245.653C513.093,157.687,513.093,150.967,508.933,146.807z M256.027,384.887L25.733,154.38l27.2-27.307l195.52,195.733
+                   c4.267,4.053,10.88,4.053,15.147,0l195.52-195.733l27.2,27.307L256.027,384.887z"/>
+           </g>
+       </g>
+       </svg>
+          </div>
     </section>
     <div id="About">
         <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">About me</h1>
@@ -167,16 +180,34 @@ As a Computer Engineering student, I am currently focusing on developing my skil
     </section>
     <Hr class="my-5" height="h-px" />
 
-<Footer/>    
+<div class="flex">
+    <div class="flex-1">
+        <Footer/> 
+    </div>
+    <div>
+        <a href="/">
+            <div class="flex-1 rotate-180 w-25 h-25 my-5" >
+                <svg fill="#31C48D" class="animate-bounce" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 512.04 512.04" xml:space="preserve">
+                   <g>
+               <g>
+                   <path d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46
+                       c-4.267-4.053-10.88-4.053-15.147,0L3.12,146.807c-4.16,4.16-4.16,10.88,0,15.04L248.453,407.5c4.16,4.16,10.88,4.16,15.04,0
+                       l245.333-245.653C513.093,157.687,513.093,150.967,508.933,146.807z M256.027,384.887L25.733,154.38l27.2-27.307l195.52,195.733
+                       c4.267,4.053,10.88,4.053,15.147,0l195.52-195.733l27.2,27.307L256.027,384.887z"/>
+               </g>
+           </g>
+           </svg>
+              </div>
+        </a>
+    </div>
+</div> 
+  
 </div>    
 
+
+
 <style>
-
-
-
-
-
-
 .area{ 
     width: 100%;
     height:100vh;
