@@ -1,5 +1,5 @@
 <script>
-    import { Input, Label } from 'flowbite-svelte';
+    import { Alert, Input, Label } from 'flowbite-svelte';
     import { Textarea } from 'flowbite-svelte'
     import Card from './card.svelte'
 		// getting the action url
@@ -7,6 +7,11 @@
     let surname = "";
     let email = "";
     let message = "";
+    let visible = false;
+
+  function toggleVissible() {
+    visible = !visible
+    } 
 		const ACTION_URL = 'https://send.pageclip.co/vOf1aijihVi3PCuBhDN1lJQ7VyLSmvuD/myWebsite'
 
     async function doPost () {
@@ -18,10 +23,16 @@
         email,
         message
 			})
+    
 		})
-		
+     name = "";
+      surname = "";
+      email = "";
+      message = "";
+      toggleVissible();
 		const json = await res.json()
 		result = JSON.stringify(json)
+    
 	}
 </script>
 
@@ -55,6 +66,11 @@
             Submit
         </span>
     </button> 
+   {#if visible}
+   <Alert color="green">
+    <span class="font-medium">Success!</span> Your message has been sent.
+  </Alert>
+   {/if}
   </form>
   </div>
 </div>
