@@ -1,6 +1,6 @@
 # .:: MY PERSONAL PORTFOLIO ::.
 
-[Personal portfolio](https://kit.svelte.dev/docs/adapters) website built with Svelte, SvelteKit, Tailwind
+[Personal portfolio](https://omarammura.me) website built with Svelte, SvelteKit, Tailwind
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
