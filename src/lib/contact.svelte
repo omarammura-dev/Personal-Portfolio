@@ -75,3 +75,19 @@
   </div>
 </div>
 
+<style>
+   @media screen and (max-width: 640px) {
+    .flex {
+      flex-direction: column;
+      align-items: center;
+    }
+    .px-20 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+

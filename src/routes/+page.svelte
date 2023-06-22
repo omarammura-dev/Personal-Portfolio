@@ -1,5 +1,6 @@
 <script>
     import Head from '$lib/header.svelte'
+    import Testimonial from '../lib/testimonial.svelte';
     import Footer from '$lib/footer.svelte'
     import Tab from '$lib/tab.svelte'
     import Contact from '$lib/contact.svelte'
@@ -11,62 +12,67 @@
 
     let experinces= [{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-present ",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
     {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Mission : Building Native Android Chat Application "}]
+
+    function scrollToSection() {
+    const section = document.getElementById('Contact');
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
 </script>
 
-
-
-<div class="container px-10">
-    <section class="p-3 area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            
-        </ul>
-            <div>
-                <img class="rounded-full w-60 h-60 mx-auto" src="/1.png" alt="MyImage">
-                <h5 class="mb-4 text-xl text-center font-extrabold  text-gray-900 dark:text-white md:text-1xl pt-7 lg:text-3xl">Hello, I'm</h5>
-                <h1 class="mb-4 text-3xl text-center font-extrabold  text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
-                <p class="text-lg font-normal text-gray-500 lg:text-xl  dark:text-gray-400 text-center">Computer Engineering Student</p>
-                <p class="text-lg font-normal text-gray-500 lg:text-xl  dark:text-gray-400 text-center py-6">Creative Web and Mobile App Developer with a talent for problem-solving</p>
-            </div>
-            <div style="margin-left: 39%;" >
-               <a href="/resume.pdf">
-                <button class=" relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                    <span class=" justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        Download CV
-                    </span>
-                </button>
-               </a> 
-              <a href="#Contact">
-                <button href="" class="mx-auto relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                    <span class="mx-auto justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        Contact me
-                    </span>
-                </button> 
-              </a>
-            </div>
-          <div style="margin-left: 49%; margin-top:40px;" >
-            <svg fill="#31C48D" class="animate-bounce" height="35px" width="35px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-            viewBox="0 0 512.04 512.04" xml:space="preserve">
-               <g>
-           <g>
-               <path d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46
-                   c-4.267-4.053-10.88-4.053-15.147,0L3.12,146.807c-4.16,4.16-4.16,10.88,0,15.04L248.453,407.5c4.16,4.16,10.88,4.16,15.04,0
-                   l245.333-245.653C513.093,157.687,513.093,150.967,508.933,146.807z M256.027,384.887L25.733,154.38l27.2-27.307l195.52,195.733
-                   c4.267,4.053,10.88,4.053,15.147,0l195.52-195.733l27.2,27.307L256.027,384.887z"/>
-           </g>
-       </g>
-       </svg>
-          </div>
-    </section>
+<Head/>
+<div class="container mx-auto px-4">
+  <section class="full-screen d-flex justify-content-center align-items-center">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="content">
+      <div>
+        <img class="rounded-full w-60 h-60 mx-auto" src="/1.png" alt="MyImage">
+        <h5 class="mb-4 text-xl text-center font-extrabold text-gray-900 dark:text-white md:text-1xl pt-7 lg:text-3xl">Hello, I'm</h5>
+        <h1 class="mb-4 text-3xl text-center font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
+        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center">Computer Engineering Student</p>
+        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center py-6">Creative Web and Mobile App Developer with a talent for problem-solving</p>
+      </div>
+      <div class="buttons">
+        <a href="/resume.pdf">
+          <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+            <span class="justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Download CV
+            </span>
+          </button>
+        </a>
+        <a on:click={scrollToSection}>
+          <button href="" class="mx-auto relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+            <span class="mx-auto justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Contact me
+            </span>
+          </button> 
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <svg fill="#31C48D" class="animate-bounce" height="35px" width="35px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.04 512.04" xml:space="preserve">
+        <g>
+          <g>
+            <path d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46
+              c-4.267-4.053-10.88-4.053-15.147,0L3.12,146.807c-4.16,4.16-4.16,10.88,0,15.04L248.453,407.5c4.16,4.16,10.88,4.16,15.04,0
+              l245.333-245.653C513.093,157.687,513.093,150.967,508.933,146.807z M256.027,384.887L25.733,154.38l27.2-27.307l195.52,195.733
+              c4.267,4.053,10.88,4.053,15.147,0l195.52-195.733l27.2,27.307L256.027,384.887z"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+  
     <div id="About">
         <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">About me</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
@@ -132,7 +138,6 @@ As a Computer Engineering student, I am currently focusing on developing my skil
             </div>
         </div>
         <div class="mt-10">
-
             <Table>
                 <TableHead>
                   <TableHeadCell>Framworks/compilers</TableHeadCell>
@@ -170,11 +175,20 @@ As a Computer Engineering student, I am currently focusing on developing my skil
     
     </div>    
     <Experinces {experinces}/>
+
+    <div id="About">
+      <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Testimonial</h1>
+      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+  </div>
+  <section>
+     <div class="flow-root" >
+      <Testimonial/>
+     </div>
+  </section>
     <div id="Contact">
         <h1 class="text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Contact Us</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
-    
-    </div>  
+    </div>    
     <section>
        <Contact/>
     </section>
@@ -329,6 +343,54 @@ As a Computer Engineering student, I am currently focusing on developing my skil
     }
 
 }
+@media screen and (max-width: 640px) {
+    .float-left {
+      float: none;
+      margin-left: 0;
+    }
+    .mt-10 {
+      margin-top: 2rem;
+    }
+    .my-4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ml-39 {
+      margin-left: 0;
+    }
+  }
+
+  .full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .content {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .scroll-indicator {
+
+    text-align: center;
+  }
+
+
 </style>
         
 
