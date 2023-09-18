@@ -36,7 +36,7 @@
     </ul>
     <div class="content">
       <div>
-        <img class="rounded-full w-60 h-60 mx-auto" src="/1.png" alt="MyImage">
+        <img class="rounded-full w-60 h-60 mx-auto" src="/main-image.png" alt="MyImage">
         <h5 class="mb-4 text-xl text-center font-extrabold text-gray-900 dark:text-white md:text-1xl pt-7 lg:text-3xl">Hello, I'm</h5>
         <h1 class="mb-4 text-3xl text-center font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
         <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center">Computer Engineering Student</p>
@@ -87,7 +87,7 @@
     <section>
        <div class="flow-root" >
         <div class="float-left round-lg bg-green-600 w-60 mx-10 flex-auto" style=" max-width: 100%;flex-basis: 40%">
-            <Img src="my.png " alt="sample 1" class="rounded-md rotate-6 hover:rotate-0 w-60" figClass="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" captionClass="absolute bottom-6 px-4 text-lg text-white" caption="Would you like to know about me ?" />
+            <Img src="about-image.png" alt="sample 1" class="rounded-md rotate-6 hover:rotate-0 w-60" figClass="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" captionClass="absolute bottom-6 px-4 text-lg text-white" caption="Would you like to know about me ?" />
         </div>
         <div class="px-20 justify-end" style="">
             <Blockquote size='md' >
