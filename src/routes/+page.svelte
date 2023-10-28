@@ -7,8 +7,15 @@
     import Experinces from '../lib/experinces.svelte';
     import { Progressbar, Hr,Img,Blockquote } from 'flowbite-svelte'
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
+    import { DarkMode } from 'flowbite-svelte';
+    import { onMount } from "svelte";
 
-
+  onMount(() => {
+    const button = document.getElementById("darrk");
+    if (button) {
+      button.click(); // Simulate a click on the button
+    }
+  });
 
     let experinces= [{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-present ",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
     {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Mission : Building Native Android Chat Application "}]
@@ -18,6 +25,7 @@
     section.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
+
 
 <Head/>
 <div class="container px-4 float-left flex-container ml-39 my-4 mt-10">
@@ -38,9 +46,9 @@
       <div>
         <img class="rounded-full w-60 h-60 mx-auto" src="/main-image.png" alt="MyImage">
         <h5 class="mb-4 text-xl text-center font-extrabold text-gray-900 dark:text-white md:text-1xl pt-7 lg:text-3xl">Hello, I'm</h5>
-        <h1 class="mb-4 text-3xl text-center font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
-        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center">Computer Engineering Student</p>
-        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center py-6">Creative Web and Mobile App Developer with a talent for problem-solving</p>
+        <h1 class="mb-4 text-3xl text-center font-extrabold text-gray-900 text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
+        <p class="text-lg font-normal text-gray-500 lg:text-xl text-gray-400 text-center">Computer Engineering Student</p>
+        <p class="text-lg font-normal text-gray-500 lg:text-xl text-gray-400 text-center py-6">Creative Web and Mobile App Developer with a talent for problem-solving</p>
       </div>
       <div class="buttons">
         <a href="/MyResume.pdf">
@@ -50,7 +58,7 @@
             </span>
           </button>
         </a>
-        <a on:click={scrollToSection}>
+        <a on:click={scrollToSection} href=" ">
           <button href="" class="mx-auto relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
             <span class="mx-auto justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
               Contact me
@@ -63,7 +71,9 @@
               Hire me
             </span>
           </button> 
+
         </a>
+       
       </div>
     </div>
     <div class="scroll-indicator">
@@ -81,7 +91,7 @@
   </section>
   
     <div id="About">
-        <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">About me</h1>
+        <h1 class=" text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">About me</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
     </div>
     <section>
@@ -89,36 +99,38 @@
         <div class="float-left round-lg bg-green-600 w-60 mx-10 flex-auto" style=" max-width: 100%;flex-basis: 40%">
             <Img src="about-image.png" alt="sample 1" class="rounded-md rotate-6 hover:rotate-0 w-60" figClass="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" captionClass="absolute bottom-6 px-4 text-lg text-white" caption="Would you like to know about me ?" />
         </div>
-        <div class="px-20 justify-end" style="">
+        <div class="px-20 justify-end text-white">
             <Blockquote size='md' >
-                <svg aria-hidden="true" class="w-10 h-10 flex-auto text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
-                Hi there! I'm a Computer Engineering student who has been passionate about programming since 2019. I discovered my love for coding when I started learning about Web Development, and I have been hooked ever since.<br/>
+                <svg aria-hidden="true" class="w-10 h-10 flex-auto text-gray-400 text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
+          <p class="text-white">
+            Hi there! I'm a Computer Engineering student who has been passionate about programming since 2019. I discovered my love for coding when I started learning about Web Development, and I have been hooked ever since.<br/>
 
-                What I enjoy most about programming is the ability to create something out of nothing, and the thrill of seeing my code come to life. As a naturally curious person, I love learning new things, and programming allows me to do just that. With every project, I am always eager to expand my knowledge and skills, and I am constantly seeking out new challenges to push myself further.<br/>
-                
-                In addition to programming, I am also interested in exploring other areas of computer engineering, such as hardware design and networking. I believe that having a well-rounded understanding of all aspects of computing is essential for becoming a successful engineer,and I am eager to explore all that this field has to offer.<br/>
-                In my free time, I enjoy participating in coding competitions and hackathons, where I can test my skills and learn from other developers. I am also a regular contributor to open-source projects, as I believe that sharing knowledge and resources is essential for the growth and development of the programming community.<br/>
+            What I enjoy most about programming is the ability to create something out of nothing, and the thrill of seeing my code come to life. As a naturally curious person, I love learning new things, and programming allows me to do just that. With every project, I am always eager to expand my knowledge and skills, and I am constantly seeking out new challenges to push myself further.<br/>
+            
+            In addition to programming, I am also interested in exploring other areas of computer engineering, such as hardware design and networking. I believe that having a well-rounded understanding of all aspects of computing is essential for becoming a successful engineer,and I am eager to explore all that this field has to offer.<br/>
+            In my free time, I enjoy participating in coding competitions and hackathons, where I can test my skills and learn from other developers. I am also a regular contributor to open-source projects, as I believe that sharing knowledge and resources is essential for the growth and development of the programming community.<br/>
 
 As a Computer Engineering student, I am currently focusing on developing my skills in software engineering, data structures and algorithms, and web development. I am also exploring new areas of programming, such as machine learning and artificial intelligence, to stay up-to-date with the latest trends and advancements in the field.<br/>
-                
-                As I continue my journey as a Computer Engineering student, I am excited to see where my passion for programming and learning will take me. I am always looking for new opportunities to expand my skills and knowledge, and I am eager to contribute my expertise to meaningful projects and initiatives. 
-                <svg aria-hidden="true" class="w-10 h-10 flex-auto rotate-180 justify-end text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
+            
+            As I continue my journey as a Computer Engineering student, I am excited to see where my passion for programming and learning will take me. I am always looking for new opportunities to expand my skills and knowledge, and I am eager to contribute my expertise to meaningful projects and initiatives. 
+          </p>
+                <svg aria-hidden="true" class="w-10 h-10 flex-auto rotate-180 justify-end text-gray-400 text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
       
             </Blockquote>
         </div>
        </div>
     </section>
 <div id="Skills">
-    <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Skills</h1>
-    <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+    <h1 class=" text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Skills</h1>
+    <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 bg-gray-700">
 </div>
-    <section>
+    <section class="bg-slate-800">
         <Tab/> 
     </section>
 
     <div id="L&T">
-        <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Languages & Tools</h1>
-        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+        <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-white text-center mt-20 font-serif">Languages & Tools</h1>
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 bg-gray-700">
     </div>
     <section >
       <div class="flow-root">
@@ -144,8 +156,8 @@ As a Computer Engineering student, I am currently focusing on developing my skil
                    progress="50" size="h-6" color="blue" />
             </div>
         </div>
-        <div class="mt-10">
-            <Table>
+        <div class="mt-10 bg-slate-800" >
+            <Table class="bg-slate-800  ">
                 <TableHead>
                   <TableHeadCell>Framworks/compilers</TableHeadCell>
                   <TableHeadCell>DevOps</TableHeadCell>
@@ -177,14 +189,14 @@ As a Computer Engineering student, I am currently focusing on developing my skil
       </div>
     </section>
     <div id="Experince">
-        <h1 class="text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Experiences</h1>
+        <h1 class="text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Experiences</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
     
     </div>    
     <Experinces {experinces}/>
 
     <div id="About">
-      <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Testimonial</h1>
+      <h1 class=" text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Testimonial</h1>
       <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
   </div>
   <section>
@@ -193,7 +205,7 @@ As a Computer Engineering student, I am currently focusing on developing my skil
      </div>
   </section>
     <div id="Contact">
-        <h1 class="text-7xl py-5 font-extrabold dark:text-white text-center mt-20 font-serif">Contact Us</h1>
+        <h1 class="text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Contact Us</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
     </div>    
     <section>
@@ -223,18 +235,12 @@ As a Computer Engineering student, I am currently focusing on developing my skil
         </a>
     </div>
 </div> 
-  
+<DarkMode id="darrk"></DarkMode>
 </div>    
 
 
 
 <style>
-.area{ 
-    width: 100%;
-    height:100vh;
-    
-   
-}
 
 .circles{
     position: absolute;

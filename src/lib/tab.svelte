@@ -3,13 +3,12 @@
     import { Badge } from 'flowbite-svelte';
 </script>
 
-<Tabs class="justify-center">
-    <TabItem  open title="Web development" color="green">
-        <div class="grid gap-4 grid-cols-4 grid-rows-1 grid-cols-responsive">
+<Tabs class="justify-center bg-slate-800">
+    <TabItem  open title="Web development" color="green" class="bg-slate-800">
+      <div class="grid gap-4 grid-cols-4 grid-rows-1 grid-cols-responsive bg-slate-800">
         <div class="">
             <h1 class="text-white font-bold">#2019</h1>
             <p class="text-sm text-gray-500 dark:text-gray-400">The journey of learning programming has begun. I started learning html and css based on tips I gathered from the internet. I designed simple websites, login forms, etc. - it was a really fun experience - after that I wanted to develop myself and move to a higher level in creating websites ... I wanted to add life to the site through Javascript.</p>
-           
         </div>
         <div>
             <h1 class="text-white font-bold">#2020</h1>
@@ -95,25 +94,9 @@
 
 <style>
     @media screen and (max-width: 640px) {
-    .text-responsive {
-      font-size: 14px;
-
-    }
     .grid-cols-responsive {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media screen and (min-width: 641px) and (max-width: 1024px) {
-    .text-responsive {
-      font-size: 16px;
-    }
-  }
-
-  @media screen and (min-width: 1025px) {
-    .text-responsive {
-      font-size: 18px;
-    }
-  }
- 
 </style>
