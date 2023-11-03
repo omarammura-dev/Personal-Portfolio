@@ -37,7 +37,7 @@
 
 
 <Head/>
-<div class="container px-4 float-left flex-container ml-39 my-4 mt-10">
+<div class="container px-4 float-left flex-container ml-39 my-4 mt-10 justify-content-center align-items-center">
   <section class="full-screen d-flex justify-content-center align-items-center">
     <ul class="circles">
       <li></li>
