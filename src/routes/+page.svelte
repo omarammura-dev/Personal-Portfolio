@@ -37,7 +37,7 @@
 
 
 <Head/>
-<div class="container px-4 float-left flex-container ml-39 my-4 mt-10 justify-content-center align-items-center">
+<div class="container mx-auto flex flex-col my-4 mt-10">
   <section class="full-screen d-flex justify-content-center align-items-center">
     <ul class="circles">
       <li></li>
@@ -111,7 +111,7 @@
             In addition to programming, I am also interested in exploring other areas of computer engineering, such as hardware design and networking. I believe that having a well-rounded understanding of all aspects of computing is essential for becoming a successful engineer,and I am eager to explore all that this field has to offer.<br/>
             In my free time, I enjoy participating in coding competitions and hackathons, where I can test my skills and learn from other developers. I am also a regular contributor to open-source projects, as I believe that sharing knowledge and resources is essential for the growth and development of the programming community.<br/>
 
-As a Computer Engineering student, I am currently focusing on developing my skills in software engineering, data structures and algorithms, and web development. I am also exploring new areas of programming, such as machine learning and artificial intelligence, to stay up-to-date with the latest trends and advancements in the field.<br/>
+ As a Computer Engineering student, I am currently focusing on developing my skills in software engineering, data structures and algorithms, and web development. I am also exploring new areas of programming, such as machine learning and artificial intelligence, to stay up-to-date with the latest trends and advancements in the field.<br/>
             
             As I continue my journey as a Computer Engineering student, I am excited to see where my passion for programming and learning will take me. I am always looking for new opportunities to expand my skills and knowledge, and I am eager to contribute my expertise to meaningful projects and initiatives. 
           </p>
@@ -343,7 +343,6 @@ As a Computer Engineering student, I am currently focusing on developing my skil
 
 
 @keyframes animate {
-
     0%{
         transform: translateY(0) rotate(0deg);
         opacity: 1;
@@ -370,14 +369,6 @@ As a Computer Engineering student, I am currently focusing on developing my skil
       margin-bottom: 1rem;
     }
   
-    .flex-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .ml-39 {
-      margin-left: 0;
-    }
   }
 
   .full-screen {

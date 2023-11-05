@@ -33,7 +33,7 @@
         </div>
       </nav>
       
-</header>
+</header> 
 
 <style>
 .clock{
