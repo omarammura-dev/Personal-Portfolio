@@ -10,7 +10,7 @@
     import { DarkMode } from 'flowbite-svelte';
     import { onMount } from "svelte";
 
-    
+   
     function handleButtonClick() {
     const button = document.getElementById("darrk");
     if (button) {
@@ -23,16 +23,14 @@
       // Dark mode
       handleButtonClick();
     }
+    window.addEventListener("hashchange", () => window.history.pushState({}, "", '/'), {});
   });
   
 
     let experinces= [{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-present ",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
     {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Mission : Building Native Android Chat Application "}]
 
-    function scrollToSection() {
-    const section = document.getElementById('Contact');
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
+   
 </script>
 
 
@@ -67,7 +65,7 @@
             </span>
           </button>
         </a>
-        <a on:click={scrollToSection} href=" ">
+        <a href="#Contact">
           <button href="" class="mx-auto relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
             <span class="mx-auto justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
               Contact me
