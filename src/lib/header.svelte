@@ -22,6 +22,7 @@
 </script>
 
 <header>
+
     <nav class="p-3 ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="/" class="flex items-center">
@@ -29,7 +30,7 @@
               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">mmura</span>
           </a>
           <h1 class="text-black dark:text-white text-end px-6 clock">{dateTime}</h1>
-
+          
         </div>
       </nav>
       
