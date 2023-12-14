@@ -16,10 +16,10 @@
       button.click(); 
     }
   }
+ 
 
   onMount(() => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      // Dark mode
       handleButtonClick();
     }
     window.addEventListener("hashchange", () => window.history.pushState({}, "", '/'), {});
@@ -273,7 +273,6 @@
     height: 80px;
     animation-delay: 0s;
 }
-
 
 .circles li:nth-child(2){
     left: 10%;
