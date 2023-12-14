@@ -242,6 +242,10 @@
 </div> 
 
 <style>
+  @media (prefers-color-scheme: dark) or (prefers-color-scheme: no-preference),
+(prefers-color-scheme: light) {
+ 
+}
 .circles{
     position: absolute;
     top: 0;
