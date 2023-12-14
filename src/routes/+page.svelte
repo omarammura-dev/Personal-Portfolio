@@ -1,30 +1,12 @@
 <script>
     import Head from '$lib/header.svelte'
-    import Testimonial from '../lib/testimonial.svelte';
     import Footer from '$lib/footer.svelte'
     import Tab from '$lib/tab.svelte'
     import Contact from '$lib/contact.svelte'
     import Experinces from '../lib/experinces.svelte';
     import { Progressbar, Hr,Img,Blockquote } from 'flowbite-svelte'
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
-    import { onMount } from "svelte";
-    import { DarkMode } from 'flowbite-svelte';
    
-    function handleButtonClick() {
-    const button = document.getElementById("darrk");
-    if (button) {
-      button.click(); 
-    }
-  }
- 
-
-  onMount(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      handleButtonClick();
-    }
-    window.addEventListener("hashchange", () => window.history.pushState({}, "", '/'), {});
-  });
-  
 
     let experinces= [{title:"Goodright GmbH (Pflegewächter), Back-end Developer",date:"2023-present",p:"Responsible of Back-end development for company's website"},{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-2023",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
     {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Building Native Android Chat Application "}]
@@ -238,7 +220,6 @@
         </a>
     </div>
 </div> 
-<!-- <DarkMode id="darrk"></DarkMode> -->
 </div> 
 
 <style>
