@@ -7,14 +7,13 @@
     import Experinces from '../lib/experinces.svelte';
     import { Progressbar, Hr,Img,Blockquote } from 'flowbite-svelte'
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
-    import { DarkMode } from 'flowbite-svelte';
     import { onMount } from "svelte";
-
+    import { DarkMode } from 'flowbite-svelte';
    
     function handleButtonClick() {
     const button = document.getElementById("darrk");
     if (button) {
-      button.click(); // Simulate a click on the button
+      button.click(); 
     }
   }
 
@@ -27,8 +26,8 @@
   });
   
 
-    let experinces= [{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-present ",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
-    {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Mission : Building Native Android Chat Application "}]
+    let experinces= [{title:"Goodright GmbH (Pflegewächter), Back-end Developer",date:"2023-present",p:"Responsible of Back-end development for company's website"},{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-2023",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
+    {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Building Native Android Chat Application "}]
 
    
 </script>
@@ -145,6 +144,11 @@
                    progress="70" size="h-6" color="red" />
             </div>
             <div class="my-4 " style="width: 400px;">
+              <div class="mb-1 text-base font-medium dark:text-white">Kotlin</div>
+                <Progressbar
+                 progress="60" size="h-6" color="purple" />
+          </div>
+            <div class="my-4 " style="width: 400px;">
                 <div class="mb-1 text-base font-medium dark:text-white">Python</div>
                   <Progressbar
                    progress="70" size="h-6" color="yellow" />
@@ -172,7 +176,7 @@
                   </TableBodyRow>
                   <TableBodyRow>
                     <TableBodyCell>SvelteJs</TableBodyCell>
-                    <TableBodyCell>kubernetes</TableBodyCell>
+                    <TableBodyCell></TableBodyCell>
                     <TableBodyCell>Google Cloud</TableBodyCell>
                     <TableBodyCell>MongoDB</TableBodyCell>
                   </TableBodyRow>
@@ -194,7 +198,7 @@
     </div>    
     <Experinces {experinces}/>
 
-    <div id="Testimonial">
+    <!-- <div id="Testimonial">
       <h1 class=" text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Testimonial</h1>
       <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
   </div>
@@ -202,7 +206,7 @@
      <div class="flow-root" >
       <Testimonial/>
      </div>
-  </section>
+  </section> -->
     <div id="Contact">
         <h1 class="text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Contact Us</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
@@ -234,13 +238,10 @@
         </a>
     </div>
 </div> 
-<DarkMode id="darrk"></DarkMode>
-</div>    
-
-
+<!-- <DarkMode id="darrk"></DarkMode> -->
+</div> 
 
 <style>
-
 .circles{
     position: absolute;
     top: 0;

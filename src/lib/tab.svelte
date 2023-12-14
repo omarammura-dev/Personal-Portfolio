@@ -43,7 +43,7 @@
             </div>
             <div class="">
                 <h1 class="text-white font-bold">#2023</h1>
-                <p class="text-sm text-gray-500 dark:text-gray-400">We are in 2023 now... I am still trying to develop myself and delve into the massive Java language and develop open source applications and projects. I wanted to build apps on the Ios platform, but unfortunately I couldn't because I didn't have MacOS. However, I am now learning Dart to target more platforms in less time (I use flutter for intermediate applications). My career continues...</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">We are in 2023 now... I am still trying to develop myself and delve into the massive Java & Kotlin languages and develop open source applications and projects.</p>
             </div>
           </div>
           <div class="py-10 ">
