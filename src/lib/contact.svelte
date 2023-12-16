@@ -2,35 +2,54 @@
     import { Alert, Input, Label } from 'flowbite-svelte';
     import { Textarea } from 'flowbite-svelte'
     import Card from './card.svelte'
+    import {PUBLIC_PAGECLIP_API_KEY,PUBLIC_PAGECLIP_FORM_NAME} from "$env/static/public"
 		// getting the action url
     let name = "";
     let surname = "";
     let email = "";
     let message = "";
     let visible = false;
+    let error = false;
 
+    
   function toggleVissible() {
     visible = !visible
     } 
-		const ACTION_URL = 'https://send.pageclip.co/vOf1aijihVi3PCuBhDN1lJQ7VyLSmvuD/myWebsite'
-
-    async function doPost () {
-		const res = await fetch(ACTION_URL, {
-			method: 'POST',
-			body: JSON.stringify({
-				name,
-				surname,
-        email,
-        message
-			})
+		const ACTION_URL = 'https://send.pageclip.co/' +PUBLIC_PAGECLIP_API_KEY + '/' + PUBLIC_PAGECLIP_FORM_NAME
     
-		})
-     name = "";
+    async function doPost () {
+      try {
+        const res = await fetch(ACTION_URL, {
+          method: 'POST',
+          body: JSON.stringify({
+            name,
+            surname,
+            email,
+            message
+          })
+        })
+        if (res.status === 200) {
+          toggleVissible();
+        } else{
+          error = !error;
+        } 
+        const json = await res.json()
+        result = JSON.stringify(json)
+      } catch (err) {
+        console.error(err)
+      }
+    
+   
+      name = "";
       surname = "";
       email = "";
       message = "";
+    if (res.status === 200) {
       toggleVissible();
-		const json = await res.json()
+    } else{
+      error = !error;
+    } 
+    const json = await res.json()
 		result = JSON.stringify(json)
     
 	}
@@ -69,6 +88,11 @@
    {#if visible}
    <Alert color="green">
     <span class="font-medium">Success!</span> Your message has been sent.
+  </Alert>
+   {/if}
+   {#if error}
+   <Alert color="red">
+    <span class="font-medium">Error!</span> Oops! Something went wrong.
   </Alert>
    {/if}
   </form>
