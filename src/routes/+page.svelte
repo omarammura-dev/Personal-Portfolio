@@ -32,7 +32,7 @@
     </ul>
     <div class="content">
       <div>
-        <img class="rounded-full w-60 h-60 mx-auto" src="/main-image.webp" alt="MyImage">
+        <img class="rounded-full w-60 h-60 mx-auto" src="/main-image.jpg" alt="MyImage">
         <h5 class="mb-4 text-xl text-center font-extrabold text-gray-900 dark:text-white md:text-1xl pt-7 lg:text-3xl">Hello, I'm</h5>
         <h1 class="mb-4 text-3xl text-center font-extrabold text-gray-900 text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
         <p class="text-lg font-normal text-gray-500 lg:text-xl text-gray-400 text-center">Computer Engineering Student</p>
