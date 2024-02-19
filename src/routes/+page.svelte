@@ -77,7 +77,7 @@
     <section>
        <div class="flow-root" >
         <div class="float-left round-lg bg-green-600 w-60 mx-10 flex-auto" style=" max-width: 100%;flex-basis: 40%">
-            <Img src="about-image.png" alt="sample 1" class="rounded-md rotate-6 hover:rotate-0 w-60" figClass="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" captionClass="absolute bottom-6 px-4 text-lg text-white" caption="Would you like to know about me ?" />
+            <Img src="about-image.png" alt="" class="rounded-md rotate-6 hover:rotate-0 w-60"  figClass="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" captionClass="absolute bottom-6 px-4 text-lg text-white" caption="Would you like to know about me ?" />
         </div>
         <div class="px-20 justify-end text-white">
             <Blockquote size='md' >
@@ -113,7 +113,7 @@
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 bg-gray-700">
     </div>
     <section >
-      <div class="flow-root">
+      <div class="flow-root grid grid-cols-1 md:grid-cols-2">
         <div class="float-left mx-20">
             <div class="my-4 " style="width: 400px;">
                 <div class="mb-1 text-base font-medium dark:text-white">C++</div>
