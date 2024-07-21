@@ -4,11 +4,10 @@
     import Tab from '$lib/tab.svelte'
     import Contact from '$lib/contact.svelte'
     import Experinces from '../lib/experinces.svelte';
-    import { Progressbar, Hr,Img,Blockquote } from 'flowbite-svelte'
-    import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
+    import { Hr,Img,Blockquote, Card, Accordion, AccordionItem } from 'flowbite-svelte'
    
 
-    let experinces= [{title:"Goodright GmbH (Pflegewächter), Back-end Developer",date:"2023-present",p:"Responsible of Back-end development for company's website"},{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-2023",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
+    let experinces= [{title:"Goodright GmbH (Pflegewächter), Full Stack Developer",date:"2023-present",p:"Responsible of the development for company's system"},{title:"MYRC L.L.C. (Remotely-Oman), General Developer ",date:"2022-2023",p:"Responsible for managing the company's website server and creating web and Android applications. Also responsible for troubleshooting."},
     {title:"SANA Group (Remotely-Saudi Arabia), Web developer",date:"2023",p:"Develop and design Shopping website"},{title:"Android Develoeper (Freelance)",date:"2021",p:"Building Native Android Chat Application "}]
 
    
@@ -16,7 +15,7 @@
 
 
 <Head/>
-<div class="container mx-auto flex flex-col my-4 mt-10">
+<div class="container mx-auto flex flex-col my-4 mt-10 w-full">
   <section class="full-screen d-flex justify-content-center align-items-center">
     <ul class="circles">
       <li></li>
@@ -36,7 +35,7 @@
         <h5 class="mb-4 text-xl text-center font-extrabold text-gray-900 dark:text-white md:text-1xl pt-7 lg:text-3xl">Hello, I'm</h5>
         <h1 class="mb-4 text-3xl text-center font-extrabold text-gray-900 text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Omar Ammura</span></h1>
         <p class="text-lg font-normal text-gray-500 lg:text-xl text-gray-400 text-center">Computer Engineering Student</p>
-        <p class="text-lg font-normal text-gray-500 lg:text-xl text-gray-400 text-center py-6">Creative Web and Mobile App Developer with a talent for problem-solving</p>
+        <p class="text-lg font-normal text-gray-500 lg:text-xl text-gray-400 text-center mb-8">Full Stack Developer at Goodright GmbH (Pflegewächter)</p>
       </div>
       <div class="buttons">
         <a href="/MyResume.pdf">
@@ -69,7 +68,6 @@
       </svg>
     </div>
   </section>
-  
     <div id="About">
         <h1 class=" text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">About me</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
@@ -100,76 +98,69 @@
         </div>
        </div>
     </section>
-<div id="Skills">
+<!-- <div id="Skills">
     <h1 class="text-7xl py-5 font-extrabold text-white text-center mt-20 font-serif">Skills</h1>
     <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 bg-gray-700">
 </div>
     <section class="bg-slate-800">
         <Tab/> 
-    </section>
+    </section> -->
 
     <div id="L&T">
         <h1 class=" text-7xl py-5 font-extrabold dark:text-white text-white text-center mt-20 font-serif">Languages & Tools</h1>
         <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 bg-gray-700">
     </div>
-    <section >
-      <div class="flow-root grid grid-cols-1 md:grid-cols-2">
-        <div class="float-left mx-20">
-            <div class="my-4 " style="width: 400px;">
-                <div class="mb-1 text-base font-medium dark:text-white">C++</div>
-                  <Progressbar
-                   progress="60" size="h-6" color="gray" />
+    <script>
+      import { Card, List, Li, Accordion, AccordionItem } from 'flowbite-svelte';
+    </script>
+    <section class="py-12 bg-slate-800">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center">
+          <Card class="w-full max-w-3xl mb-8">
+            <h5 class="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Programming Languages</h5>
+            <div class="flex flex-wrap justify-center gap-4">
+              {#each ['Go','C++', 'Java', 'Kotlin', 'Python', 'TypeScript'] as language}
+                <span class="px-4 py-2 bg-blue-500 text-white rounded-full">{language}</span>
+              {/each}
             </div>
-            <div class="my-4 " style="width: 400px;">
-                <div class="mb-1 text-base font-medium dark:text-white">Java</div>
-                  <Progressbar
-                   progress="70" size="h-6" color="red" />
-            </div>
-            <div class="my-4 " style="width: 400px;">
-              <div class="mb-1 text-base font-medium dark:text-white">Kotlin</div>
-                <Progressbar
-                 progress="60" size="h-6" color="purple" />
-          </div>
-            <div class="my-4 " style="width: 400px;">
-                <div class="mb-1 text-base font-medium dark:text-white">Python</div>
-                  <Progressbar
-                   progress="70" size="h-6" color="yellow" />
-            </div>
-            <div class="my-4 " style="width: 400px;">
-                <div class="mb-1 text-base font-medium dark:text-white">TypeScript</div>
-                  <Progressbar
-                   progress="50" size="h-6" color="blue" />
-            </div>
-        </div>
-        <div class="mt-10 bg-slate-800" >
-            <Table class="bg-slate-800  ">
-                <TableHead>
-                  <TableHeadCell>Framworks/compilers</TableHeadCell>
-                  <TableHeadCell>DevOps</TableHeadCell>
-                  <TableHeadCell>Cloud</TableHeadCell>
-                  <TableHeadCell>Databases</TableHeadCell>
-                </TableHead>
-                <TableBody class="divide-y">
-                  <TableBodyRow>
-                    <TableBodyCell>NodeJs</TableBodyCell>
-                    <TableBodyCell>Docker</TableBodyCell>
-                    <TableBodyCell>Azure</TableBodyCell>
-                    <TableBodyCell>MySql/Sqlite</TableBodyCell>
-                  </TableBodyRow>
-                  <TableBodyRow>
-                    <TableBodyCell>SvelteJs</TableBodyCell>
-                    <TableBodyCell></TableBodyCell>
-                    <TableBodyCell>Google Cloud</TableBodyCell>
-                    <TableBodyCell>MongoDB</TableBodyCell>
-                  </TableBodyRow>
-                  <TableBodyRow>
-                    <TableBodyCell>Express</TableBodyCell>
-                    <TableBodyCell></TableBodyCell>
-                    <TableBodyCell>AWS</TableBodyCell>
-                    <TableBodyCell>FirebaseStore/RealtimeDB</TableBodyCell>
-                  </TableBodyRow>
-                </TableBody>
-              </Table>
+          </Card>
+          <Card class="w-full max-w-3xl">
+            <h5 class="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Technologies & Tools</h5>
+            <Accordion>
+              <AccordionItem>
+                <span slot="header">Frameworks, Libraries & Runtime</span>
+                <div class="flex flex-wrap justify-center gap-4 mt-2">
+                  {#each ['Quarkus','Node.js', 'Svelte','React','Angular', 'Express.js', 'GraphQL'] as framework}
+                    <span class="px-4 py-2 bg-green-500 text-white rounded-full">{framework}</span>
+                  {/each}
+                </div>
+              </AccordionItem>
+              <AccordionItem>
+                <span slot="header">DevOps</span>
+                <div class="flex flex-wrap justify-center gap-4 mt-2">
+                  {#each ['Docker', 'Git', 'CI/CD'] as tool}
+                    <span class="px-4 py-2 bg-red-500 text-white rounded-full">{tool}</span>
+                  {/each}
+                </div>
+              </AccordionItem>
+              <AccordionItem>
+                <span slot="header">Cloud Platforms</span>
+                <div class="flex flex-wrap justify-center gap-4 mt-2">
+                  {#each ['Azure', 'Google Cloud', 'AWS'] as platform}
+                    <span class="px-4 py-2 bg-purple-500 text-white rounded-full">{platform}</span>
+                  {/each}
+                </div>
+              </AccordionItem>
+              <AccordionItem>
+                <span slot="header">Databases</span>
+                <div class="flex flex-wrap justify-center gap-4 mt-2">
+                  {#each ['MySQL / SQLite', 'MongoDB', 'Firebase'] as database}
+                    <span class="px-4 py-2 bg-yellow-500 text-white rounded-full">{database}</span>
+                  {/each}
+                </div>
+              </AccordionItem>
+            </Accordion>
+          </Card>
         </div>
       </div>
     </section>
@@ -227,16 +218,23 @@
 (prefers-color-scheme: light) {
  
 }
-.circles{
+.circles {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
+    z-index: -1;
 }
 
-.circles li{
+@media (max-width: 768px) {
+    .circles {
+        position: fixed;
+    }
+}
+
+.circles li {
     position: absolute;
     display: block;
     list-style: none;
@@ -245,17 +243,16 @@
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
-    
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
     left: 10%;
     width: 20px;
     height: 20px;
@@ -263,14 +260,14 @@
     animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -278,28 +275,28 @@
     animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
     left: 50%;
     width: 25px;
     height: 25px;
@@ -307,7 +304,7 @@
     animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
     left: 20%;
     width: 15px;
     height: 15px;
@@ -315,12 +312,18 @@
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
     left: 85%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
+}
+
+@media screen and (max-width: 640px) {
+    .circles {
+        right: 20px; /* Add right margin for mobile screens */
+    }
 }
 
 
