@@ -25,7 +25,7 @@
         visible = !visible
     } 
 
-    const endpoint = 'http://api.mux04.com/graphql'
+    const endpoint = 'https://api.mux04.com/graphql'
     
     async function doPost() {
         if (!recaptchaToken) {
